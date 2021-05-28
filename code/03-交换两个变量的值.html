@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交换两个变量的值</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            交换两个变量的值
+                方法一：
+                    定义一个中间变量_c用来存储_a的值
+                方法二：
+                    做加减法
+        */
+        //将_a和_b的值交换
+        var _a = 123;
+        var _b = 456;
+        //定义一个变量_c用来存储_a的值
+        var _c = _a;
+        _a = _b;
+        _b = _c;
+        console.log(_a);
+        console.log(_b);
+
+        //做加减法
+        var boy = 110;
+        var girl = 120;
+        boy = boy + girl;
+        girl = boy - girl;
+        boy = boy - girl;
+        console.log(boy);
+        console.log(girl);
+    </script>
+</body>
+
+</html>

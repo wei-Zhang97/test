@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            变量：
+                一般使用var来声明变量
+                相当于容器，值相当于容器内装的东西，通过变量可以找到想对应的值
+                可以通过var来声明变量，也可以改变变量的值，后一个值会覆盖掉前面已经声明的值
+                可以同时声明多个变量，变量名与变量名中间用逗号隔开，每条变量声明完后 最好加上分号。
+            变量名的格式：
+                一般都是以_ $ 字母开头，不能以数字开头，不能加空格。
+                严格区分大小写。 aa 与 AA是两个变量名，是不一样的
+                不能使用关键字，和保留字
+                关键字：一般像class id body 这些都是不可以使用的
+                保留字：一般是保留下来留着以后使用的
+                像top这个词严格来讲既不是关键字也不是保留字，但是不可以用，在控制台有一个地方用到了top这个词
+        */
+        var _a = 123;
+        var $b = 456;
+        var ab = 789;
+        var _boy = 100;
+        _boy = 102;
+        _boy = 106;
+        //控制台会输出106，变量声明一次之后 不用再此声明，直接给变量名赋值就可以
+        console.log(_boy);
+        console.log(_a);
+        console.log($b);
+        console.log(ab);
+        //可以一次定义多个变量名，不同变量名之间用逗号隔开
+        var _aa = "小明",
+            _bb = "小张",
+            _cc = "小李";
+        console.log(_aa, _bb, _cc);
+    </script>
+</body>
+
+</html>

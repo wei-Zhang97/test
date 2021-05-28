@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型</title>
+</head>
+
+<body>
+    <script>
+        /*
+            数据类型：
+                基本数据类型：
+                    Number  数字
+                    String  字符串  ""
+                    boolean 布尔值  true也是1    false也是0
+                    null    只有一个值  null空
+                    undefined   只有一个值undefined未定义
+                复杂数据类型：
+                    object(数组、函数、对象)
+        */
+        var a = 123;        //返回的是number数字类型
+        var b = "123";      //返回的是string字符串类型
+        var c = true;       //返回的是boolean布尔值
+        var d = null;       //返回的object 
+        var e;              //返回的是undefined未定义的值
+        var f = function () { }     //返回的是function 其实也是object值，为了和数组，对象区分，专门定义的类型
+        //typeof 用来返回数据的类型 用法有两种： console.log(typeof a);  或者 typeof a;
+        console.log(typeof a);
+        console.log(typeof b);
+        console.log(typeof c);
+        console.log(typeof d);
+        console.log(typeof e);
+        console.log(typeof f);
+    </script>
+</body>
+
+</html>

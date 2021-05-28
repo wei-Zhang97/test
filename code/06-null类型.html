@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>null类型</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            null的值只有一个，就是为null
+                应用场景：
+                    定一个变量值为null，方便以后赋值
+                    定义一个函数，在给函数的方法传参的时候可以直接传值为null
+                    声明一个对象，让其变为垃圾对象，给其赋值为null，它就不占运行内存了，也就慢慢被清理掉了
+                    原型链的终点为null
+                        当调用子元素的某个方法时，子元素中没有，就会去它的父级祖辈去找，都没有的时候，终点就是null
+        */
+
+        //场景一       定义一个变量的值为null，以便之后再给变量a赋值
+        var aa = null;
+        aa = 123;
+        console.log(aa);
+
+        //场景二        定义一个函数        传参的时候，直接赋值为null
+        function _class(name, age) {
+            console.log("姓名是" + name);
+            console.log("年龄是" + age);
+        }
+        _class("张三", 18);
+        _class(null, 20);
+
+        //场景三    声明一个对象，将它变为垃圾对象，给他赋值为null
+        var boy = {
+
+        }
+        boy = null;
+    </script>
+</body>
+
+</html>

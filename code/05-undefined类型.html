@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>undefined类型</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            undefined类型：
+                它表示未定义，一般不用它来表示，除非出错的时候，会提示undefined
+        */
+        /* 
+            应用场景一：
+                声明变量的时候，光声明变量但未赋值，当控制台输出a的时候会提示undefined
+        */
+        var a;
+        console.log(a);
+
+
+        /* 
+            应用场景二：
+                封装一个函数,传参的时候，少传了一个参数，则这个参数会显示undefined
+        */
+        //封装一个函数，_class是方法的名字，小括号里放的是参数
+        function _class(name, age, sex) {
+            console.log("姓名是" + name);
+            console.log("年龄是" + age);
+            console.log("性别是" + sex);
+        }
+        //调用_class方法，给方法里的参数赋值
+        _class("张三", 18, "男");
+        _class("李四", 24, "女");
+        _class("王五", 21, "男");
+        //当调用_class方法的时候，给其传参的时候，只传了两个参数，则另一个参数的值会显示undefined
+        _class("小明", 55);
+
+
+        /*
+            应用场景三：
+                定义一个对象
+                当获取这个对象中未定义的内容的时候，会返回一个undefined
+        */
+        var boy = {
+            name: "张三",
+            age: 18,
+            sex: "男",
+        }
+        console.log(boy.name);
+        console.log(boy.age);
+        console.log(boy.hobby);
+
+
+        /* 
+            应用场景四
+                封装一个函数，计算参数的和
+                当这个函数未返回值时， 我们拿不到值，这个时候想要再控制台获取输出结果，会显示undefined
+        */
+        function add(q, w) {
+            //当传完参数后，控制台会弹出计算的结果
+            console.log(q + w);
+        }
+        //定一个变量 用来给add这个方法赋值，但是这个方法只能在方法内获取，返回不到外面，我们拿不到这个结果
+        var con = add(9, 5);
+        console.log(con);
+
+        //将上面的函数计算进行更改，函数有返回值了，我们就可以获取到它的计算结果了
+        function _add(w, s) {
+            var asd = w + s;
+            return asd;
+        }
+        var _con = _add(8, 5);
+        console.log(_con);
+    </script>
+</body>
+
+</html>
